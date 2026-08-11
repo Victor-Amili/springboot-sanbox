@@ -1,0 +1,11 @@
+curl -X POST "http://localhost:8080/students" \
+-H "Content-Type: application/json" \
+-d '{"name":"John Doe","address":"419 lekki phase 1","gender":"Male"}'
+
+curl -X POST "http://localhost:8080/students" \
+-H "Content-Type: application/json" \
+-d '{"name":"Victor Amili","address":"419 nanobite phase 2","gender":"Male"}'
+
+curl -X POST "http://localhost:8080/students" \
+-H "Content-Type: application/json" \
+-d '{"name":"Esther Jane","address":"419 faculty phase 3","gender":"Female"}'
