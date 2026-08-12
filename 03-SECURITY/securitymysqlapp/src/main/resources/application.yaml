@@ -1,6 +1,7 @@
 spring:
   application:
     name: mysqlapp
+    port: 8081
 
 
   datasource:
