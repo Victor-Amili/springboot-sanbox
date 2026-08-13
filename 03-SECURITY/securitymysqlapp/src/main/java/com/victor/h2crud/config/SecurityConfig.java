@@ -48,7 +48,7 @@ public class SecurityConfig {
                 configurer
                         .requestMatchers(HttpMethod.GET, "/api/v1/customers").hasRole("EMPLOYEE")
                         .requestMatchers(HttpMethod.GET, "/api/v1/customers/**").hasRole("EMPLOYEE")
-                        .requestMatchers(HttpMethod.POST, "/api/v1/customers/**").hasRole("MANAGER")
+//                        .requestMatchers(HttpMethod.POST, "/api/v1/customers/**").hasRole("MANAGER")
                         .requestMatchers(HttpMethod.POST, "/api/v1/customers").hasRole("MANAGER")
                         .requestMatchers(HttpMethod.PUT, "/api/v1/customers/**").hasRole("MANAGER")
                         .requestMatchers(HttpMethod.DELETE, "/api/v1/customers/**").hasRole("ADMIN"));
