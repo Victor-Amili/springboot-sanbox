@@ -10,35 +10,57 @@ import java.util.Date;
 
 @Service
 public class JwtService {
-    private static final String SECRET = "By-super-secret-key";
 
-    private Key key = Keys.hmacShaKeyFor(SECRET.getBytes(StandardCharsets.UTF_8));
+    private static final String SECRET =
+            "mySuperSecretKeyThatIsAtLeast32CharactersLong123456!";
 
-    public String generateToken(String username){
+    private final Key key =
+            Keys.hmacShaKeyFor(
+                    SECRET.getBytes(StandardCharsets.UTF_8)
+            );
+
+    public String generateToken(String username) {
+
         return Jwts.builder()
                 .setSubject(username)
                 .setIssuedAt(new Date())
-                .setExpiration(new Date(System.currentTimeMillis()+1000+60+60))
+                .setExpiration(
+                        new Date(
+                                System.currentTimeMillis()
+                                        + 24 * 60 * 60 * 1000
+                        )
+                )
                 .signWith(key)
                 .compact();
     }
 
-    public String extractUsername (String token){
+    public String extractUsername(String token) {
+
         return Jwts.parser()
                 .setSigningKey(key)
                 .parseClaimsJws(token)
                 .getBody()
                 .getSubject();
-        
     }
 
-    public boolean validateToken(String token){
-        try{
-            Jwts.parser().setSigningKey(key).parseClaimsJws(token);
+    public boolean validateToken(String token) {
+
+        try {
+
+            Jwts.parser()
+                    .setSigningKey(key)
+                    .parseClaimsJws(token);
+
             return true;
-        }catch (Exception e){
+
+        } catch (Exception e) {
+
+            System.out.println(
+                    "JWT validation error: " + e.getMessage()
+            );
+
             return false;
         }
     }
-
 }
+
