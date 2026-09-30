@@ -1,0 +1,46 @@
+//CREATE A CUSTOMER
+
+curl POST "http://localhost:8080/api/v1/customers" ^
+-H "Context-Type: applicaton/json" ^
+-d "{\"name\":\"John Doe\",\"address\":\"419 lekki phase 1\",\"gender\":\"Male\"}"
+
+//FOR GIT BASH
+
+curl -X POST "http://localhost:8080/api/v1/customers" \
+-H "Content-Type: application/json" \
+-d '{"name":"John Doe","address":"419 lekki phase 1","gender":"Male"}'
+
+curl -X POST "http://localhost:8080/api/v1/customers" \
+-H "Content-Type: application/json" \
+-d '{"name":"Victor Amili","address":"419 nanobite phase 2","gender":"Male"}'
+
+curl -X POST "http://localhost:8080/api/v1/customers" \
+-H "Content-Type: application/json" \
+-d '{"name":"Esther Jane","address":"419 faculty phase 3","gender":"Female"}'
+
+// VIEW ALL CUSTOMER
+
+curl -x GET https://localhost:8080/api/v1/customers
+
+// VIEW ALL CUSTOMER FOR GIT BASH
+curl -X GET http://localhost:8080/api/v1/customers
+
+// VIEW A PARTICULAR CUSTOMER
+
+curl -x GET "https://localhost:8080/api/v1/customers/1"
+
+// VIEW A PARTICULAR CUSTOMER FOR GIT BASH
+
+curl -X GET http://localhost:8080/api/v1/customers/1
+
+// UODATE A CUSTOMER
+curl -X PUT "http://localhost:8080/api/v1/customers/3" \
+-H "Content-Type: application/json" \
+-d '{"name":"Nicarabara Omotosho","address":"419 faculty phase 3","gender":"Male"}'
+
+curl -X PUT "http://localhost:8080/api/v1/customer/3" \
+-H "Content-Type: application/json" \
+-d '{"name":"Nicarabara Omotosho","address":"419 faculty phase 3","gender":"Male"}'
+
+// DELETE A CUSTOMER
+curl -X DELETE http://localhost:8080/api/v1/customers/1
