@@ -1,4 +1,4 @@
-package com.tsola2002.notificationservice;
+package com.victor.notificationservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

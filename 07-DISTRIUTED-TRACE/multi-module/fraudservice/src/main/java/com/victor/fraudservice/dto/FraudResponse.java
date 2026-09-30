@@ -1,14 +1,15 @@
-package com.tsola2002.customerservice.dto;
+package com.victor.fraudservice.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 public class FraudResponse {
 
     private String customerId;
     private boolean fraudulent;
+    
 }

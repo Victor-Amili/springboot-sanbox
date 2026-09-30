@@ -1,14 +1,15 @@
-package com.tsola2002.fraudservice;
+package com.victor.customerservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
 @SpringBootApplication
-public class FraudServiceApplication {
+public class CustomerServiceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(FraudServiceApplication.class, args);
+        SpringApplication.run(CustomerServiceApplication.class, args);
     }
 
 }
+

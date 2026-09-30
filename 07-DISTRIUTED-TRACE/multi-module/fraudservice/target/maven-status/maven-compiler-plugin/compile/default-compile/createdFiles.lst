@@ -1,3 +1,6 @@
 com\tsola2002\fraudservice\dto\FraudResponse.class
 com\tsola2002\fraudservice\FraudServiceApplication.class
+com\victor\fraudservice\FraudServiceApplication.class
 com\tsola2002\fraudservice\controller\FraudController.class
+com\victor\fraudservice\controller\FraudController.class
+com\victor\fraudservice\dto\FraudResponse.class

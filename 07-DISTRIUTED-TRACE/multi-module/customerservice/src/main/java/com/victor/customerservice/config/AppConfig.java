@@ -1,4 +1,4 @@
-package com.tsola2002.customerservice.config;
+package com.victor.customerservice.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -1,11 +1,11 @@
-package com.tsola2002.fraudservice.controller;
+package com.victor.fraudservice.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.tsola2002.fraudservice.dto.FraudResponse;
+import com.victor.fraudservice.dto.FraudResponse;
 
 import lombok.extern.slf4j.Slf4j;
 
