@@ -1,0 +1,3 @@
+com\victor\fraudservice\FraudServiceApplication.class
+com\victor\fraudservice\controller\FraudController.class
+com\victor\fraudservice\dto\FraudResponse.class
